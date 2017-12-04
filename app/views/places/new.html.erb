@@ -1,0 +1,20 @@
+<%= form_with scope: :place, url: places_path, local: true do |form| %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+    
+    <p>
+        <%= form.label :coordinates %><br>
+        <%= form.text_field :coordinates %>
+    </p>
+
+    <p>
+        <%= form.label :keywords %><br>
+        <%= form.text_area :keywords %>
+    </p>
+    
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
