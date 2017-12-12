@@ -1,5 +1,6 @@
-<%= form_with scope: :place, url: places_path, local: true do |form| %>
-    
+<h1>Edit place</h1>
+
+<%= form_with(model: @place) do |form| %>
     <% if @place.errors.any? %>
         <div id="error_explanation">
             <h2>
@@ -17,7 +18,7 @@
         <%= form.label :title %><br>
         <%= form.text_field :title %>
     </p>
-    
+
     <p>
         <%= form.label :coordinates %><br>
         <%= form.text_field :coordinates %>
@@ -27,10 +28,11 @@
         <%= form.label :keywords %><br>
         <%= form.text_area :keywords %>
     </p>
-    
+
     <p>
         <%= form.submit %>
     </p>
+
 <% end %>
 
 <%= link_to 'Back', places_path %>
